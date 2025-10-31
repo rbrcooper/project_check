@@ -55,11 +55,6 @@ writeData(wb, "rbc_coal_pivot", rbc_coal_pivot)
 
 ######### Saving the file  
 ###  Save the workbook to an Excel file
-openxlsx::saveWorkbook(wb, "C:/Users/ryanr/Reclaim Finance/Reclaim Cloud - Documents/5. Donnees Financieres/GFANZ/Project_check/rbc_all_coal.xlsx", overwrite = T)
-
-
-write_xlsx(rbc_coal, "C:/Users/ryanr/Reclaim Finance/Reclaim Cloud - Documents/5. Donnees Financieres/GFANZ/rbc_all_coal.xlsx")
-
 
 ################################################################################
 ####################### Natixis
@@ -136,8 +131,7 @@ sogen_coal_pivot <- sogen_breach %>%
 
 
 # Create a new workbook
-sogen <- loadWorkbook("C:/Users/ryanr/Reclaim Finance/Reclaim Cloud - Documents/5. Donnees Financieres/GFANZ/Project_check/sogen_all_coal.xlsx")
-
+sogen <- loadWorkbook(
 removeWorksheet(sogen, sheet = "sogen_coal_breach")
 removeWorksheet(sogen, sheet = "sogen_all_coal")
 
@@ -150,9 +144,7 @@ addWorksheet(sogen, "sogen_coal_breach")
 writeData(sogen, "sogen_coal_breach", sogen_breach)
 
 # Save the workbook to an Excel file
-openxlsx::saveWorkbook(sogen, "C:/Users/ryanr/Reclaim Finance/Reclaim Cloud - Documents/5. Donnees Financieres/GFANZ/Project_check/sogen_all_coal.xlsx", overwrite = T)
-
-
+openxlsx::saveWorkbook(sogen,
 ################################################################################
 ###################### CA
 ################################################################################
@@ -192,8 +184,7 @@ addWorksheet(CA, "CA_coal_breach")
 writeData(CA, "CA_coal_pivot", CA_breach)
 
 # Save the workbook to an Excel file
-openxlsx::saveWorkbook(CA, "C:/Users/ryanr/Reclaim Finance/Reclaim Cloud - Documents/5. Donnees Financieres/GFANZ/Project_check/CA_all_coal.xlsx", overwrite = T)
-
+openxlsx::saveWorkbook(CA, 
 ################################################################################
 ###################### BNP
 ################################################################################
@@ -227,6 +218,5 @@ addWorksheet(BNP, "BNP_coal_breach")
 writeData(BNP, "BNP_coal_breach", BNP_breach)
 
 # Save the workbook to an Excel file
-openxlsx::saveWorkbook(BNP, "C:/Users/ryanr/Reclaim Finance/Reclaim Cloud - Documents/5. Donnees Financieres/GFANZ/Project_check/BNP_all_coal.xlsx", overwrite = T)
-
+openxlsx::saveWorkbook(BNP, 
 

@@ -8,9 +8,6 @@ library(stringr)
 
 # Load the the relevant data set to be used for the project CHECK
 
-setwd("C:/Users/ryanr/Reclaim Finance/Reclaim Cloud - Documents/5. Donnees Financieres/GFANZ")
-cred_ff <- read_excel("C:/Users/ryanr/Reclaim Finance/Reclaim Cloud - Documents/5. Donnees Financieres/GFANZ/230515_creditor_ff-exit_join.xlsx")
-
 # Certain variables need to be transformed into the correct class, the below is based upon the variable names in the GCEL after applying the "clean_names" function
 
 numeric_var_ff <- c(
